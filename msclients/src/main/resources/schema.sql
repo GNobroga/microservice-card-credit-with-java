@@ -1,0 +1,8 @@
+CREATE TABLE clients (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    cpf CHAR(11) NOT NULL UNIQUE,
+    name VARCHAR(255) NOT NULL,
+    age INTEGER CHECK (age > 0 AND age < 120)
+);
+
+

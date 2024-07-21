@@ -1,0 +1,55 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaserverApplication<eurekaserver>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.gnobroga.eurekaserver.EurekaserverApplication",
+            "projectName": "eurekaserver",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=55169 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=eurekaserver"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsclientsApplication<msclients>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.gnobroga.msclients.MsclientsApplication",
+            "projectName": "msclients",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MscreditevaluatorApplication<mscreditavaluator>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.gnobroga.mscreditavaluator.MscreditevaluatorApplication",
+            "projectName": "mscreditavaluator",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MscardsApplication<mscards>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.gnobroga.mscards.MscardsApplication",
+            "projectName": "mscards",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MscloudgatewayApplication<mscloudgateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.gnobroga.mscloudgateway.MscloudgatewayApplication",
+            "projectName": "mscloudgateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+INSERT INTO clients (name, cpf, age) VALUES ('Gabriel Cardoso', '17364509720', 24);
