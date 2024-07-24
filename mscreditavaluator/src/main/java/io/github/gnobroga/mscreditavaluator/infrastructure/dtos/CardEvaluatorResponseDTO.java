@@ -2,21 +2,20 @@ package io.github.gnobroga.mscreditavaluator.infrastructure.dtos;
 
 import java.math.BigDecimal;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Builder
-public class ClientCard {
+public class CardEvaluatorResponseDTO {
     
-    private String name;
+    private String card;
 
     private String flagCard;
 
-    @JsonProperty("limit")
-    private BigDecimal availableLimit;
+    private BigDecimal approvedLimit;
 }

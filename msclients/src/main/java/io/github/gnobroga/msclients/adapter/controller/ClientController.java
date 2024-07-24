@@ -14,14 +14,10 @@ import io.github.gnobroga.msclients.adapter.inbound.dtos.CreateClientRequestDTO;
 import io.github.gnobroga.msclients.adapter.outbound.CreateClientUseCaseAdapter;
 import io.github.gnobroga.msclients.adapter.outbound.FetchClientByCpfUseCaseAdapter;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
-
 
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/clients")
-@Slf4j
 public class ClientController {
 
     private final CreateClientUseCaseAdapter createClientUseCaseAdapter;
