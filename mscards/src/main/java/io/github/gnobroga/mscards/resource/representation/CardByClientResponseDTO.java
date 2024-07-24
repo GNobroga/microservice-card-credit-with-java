@@ -2,7 +2,7 @@ package io.github.gnobroga.mscards.resource.representation;
 
 import java.math.BigDecimal;
 
-import io.github.gnobroga.mscards.entities.ClientCard;
+import io.github.gnobroga.mscards.entity.ClientCard;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package io.github.gnobroga.mscards.entities;
+package io.github.gnobroga.mscards.entity;
 
 import java.math.BigDecimal;
 
@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -19,6 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ClientCard {
     
     @Id

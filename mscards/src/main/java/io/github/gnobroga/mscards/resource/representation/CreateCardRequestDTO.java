@@ -3,8 +3,8 @@ package io.github.gnobroga.mscards.resource.representation;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-import io.github.gnobroga.mscards.entities.Card;
-import io.github.gnobroga.mscards.entities.Card.FlagCard;
+import io.github.gnobroga.mscards.entity.Card;
+import io.github.gnobroga.mscards.entity.Card.FlagCard;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package io.github.gnobroga.mscards.entities;
+package io.github.gnobroga.mscards.entity;
 
 import java.math.BigDecimal;
 import java.util.Objects;

@@ -8,8 +8,8 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import io.github.gnobroga.mscards.entities.Card;
-import io.github.gnobroga.mscards.entities.Card.FlagCard;
+import io.github.gnobroga.mscards.entity.Card;
+import io.github.gnobroga.mscards.entity.Card.FlagCard;
 import io.github.gnobroga.mscards.repository.CardRepository;
 import lombok.RequiredArgsConstructor;
 

@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Repository;
 
-import io.github.gnobroga.mscards.entities.Card;
+import io.github.gnobroga.mscards.entity.Card;
 import lombok.Getter;
 
 @Repository

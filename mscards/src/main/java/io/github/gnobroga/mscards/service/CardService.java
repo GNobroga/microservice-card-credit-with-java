@@ -6,7 +6,7 @@ import java.util.Objects;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.gnobroga.mscards.entities.Card;
+import io.github.gnobroga.mscards.entity.Card;
 import io.github.gnobroga.mscards.repository.CardRepository;
 import lombok.RequiredArgsConstructor;
 

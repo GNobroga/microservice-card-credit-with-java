@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.gnobroga.mscards.entities.Card;
+import io.github.gnobroga.mscards.entity.Card;
 import io.github.gnobroga.mscards.resource.representation.CardByClientResponseDTO;
 import io.github.gnobroga.mscards.resource.representation.CreateCardRequestDTO;
 import io.github.gnobroga.mscards.service.CardService;
