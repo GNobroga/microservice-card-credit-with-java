@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.gnobroga.mscreditavaluator.domain.exceptions.CardIssuanceErrorException;
 import io.github.gnobroga.mscreditavaluator.domain.exceptions.ClientNotFoundException;
 import io.github.gnobroga.mscreditavaluator.domain.exceptions.NoComunicationMicroserviceException;
 import io.github.gnobroga.mscreditavaluator.infrastructure.dtos.CardEvaluatorRequestDTO;
 import io.github.gnobroga.mscreditavaluator.infrastructure.dtos.CardEvaluatorResponseDTO;
+import io.github.gnobroga.mscreditavaluator.infrastructure.dtos.CardIssuanceRequestDTO;
 import io.github.gnobroga.mscreditavaluator.infrastructure.dtos.ClientSituationResponseDTO;
 import io.github.gnobroga.mscreditavaluator.infrastructure.service.CardEvaluatorService;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +33,15 @@ import lombok.RequiredArgsConstructor;
 public class CardEvaluatorAPIController {
     
     private final CardEvaluatorService service;
+
+    @PostMapping("/issuance")
+    public ResponseEntity<?> issuanceRequest(@RequestBody CardIssuanceRequestDTO request) {
+        try {
+            return ResponseEntity.ok(service.issuanceRequest(request));
+        } catch (CardIssuanceErrorException error) {
+            return ResponseEntity.internalServerError().body(error.getMessage());
+        }
+    }
 
     @PostMapping
     public ResponseEntity<List<CardEvaluatorResponseDTO>> post(@RequestBody final CardEvaluatorRequestDTO request) {

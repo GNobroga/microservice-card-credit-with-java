@@ -1,4 +1,4 @@
-package io.github.gnobroga.mscreditavaluator.infrastructure.dtos;
+package io.github.gnobroga.mscreditavaluator.model;
 
 import java.math.BigDecimal;
 

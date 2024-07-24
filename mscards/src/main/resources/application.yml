@@ -12,6 +12,11 @@ spring:
         show_sql: true
         hibernate:
             ddl-auto: create
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
 
 server:
     port: 0
@@ -23,3 +28,9 @@ eureka:
 
     instance:
         instance-id: ${spring.application.name}:${random.value}
+
+amqp:
+    rabbit:
+        queues: 
+            card-issuance: card-issuance-queue
+

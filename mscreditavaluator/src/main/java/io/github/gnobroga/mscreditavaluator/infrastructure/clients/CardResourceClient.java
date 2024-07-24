@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import io.github.gnobroga.mscreditavaluator.infrastructure.dtos.Card;
-import io.github.gnobroga.mscreditavaluator.infrastructure.dtos.ClientCard;
+import io.github.gnobroga.mscreditavaluator.model.Card;
+import io.github.gnobroga.mscreditavaluator.model.ClientCard;
 
 @FeignClient(name = "card-resource", url = "${card.url}")
 public interface CardResourceClient {
