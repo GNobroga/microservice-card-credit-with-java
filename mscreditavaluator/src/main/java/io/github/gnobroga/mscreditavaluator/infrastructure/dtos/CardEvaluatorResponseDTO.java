@@ -12,6 +12,8 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class CardEvaluatorResponseDTO {
+
+    private String id;
     
     private String card;
 

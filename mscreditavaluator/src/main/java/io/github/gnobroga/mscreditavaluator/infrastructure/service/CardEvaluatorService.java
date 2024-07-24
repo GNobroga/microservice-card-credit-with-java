@@ -60,7 +60,7 @@ public class CardEvaluatorService {
                     BigDecimal age = BigDecimal.valueOf(client.getAge());
                     var factor = age.divide(BigDecimal.valueOf(10));
                     var approvedLimit = factor.multiply(basicLimit);
-                    return new CardEvaluatorResponseDTO(card.getName(), card.getFlagCard(), approvedLimit);
+                    return new CardEvaluatorResponseDTO(card.getId(), card.getName(), card.getFlagCard(), approvedLimit);
                 }).toList();
         } catch (FeignClientException e) {
           final var status = e.status();

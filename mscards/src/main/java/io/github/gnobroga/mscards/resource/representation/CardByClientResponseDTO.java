@@ -23,7 +23,7 @@ public class CardByClientResponseDTO {
     public static CardByClientResponseDTO from(ClientCard source) {
         return CardByClientResponseDTO.builder()
             .flagCard(source.getCard().getFlagCard().name())
-            .name(source.getCard().toString())
+            .name(source.getCard().getName())
             .limit(source.getLimit())
             .build();
     }
