@@ -1,0 +1,16 @@
+version: "3"
+
+networks:
+  ms:
+    name: microservices
+    external: true
+
+services:
+
+  msclients:
+    build:
+      context: ./
+    container_name: msclients
+    restart: always 
+    networks:
+      - ms

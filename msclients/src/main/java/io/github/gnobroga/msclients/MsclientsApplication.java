@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableEurekaClient
 @SpringBootApplication
 public class MsclientsApplication {
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MsclientsApplication.class, args);
 	}

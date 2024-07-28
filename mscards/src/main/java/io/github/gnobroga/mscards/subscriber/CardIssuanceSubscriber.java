@@ -17,9 +17,11 @@ import io.github.gnobroga.mscards.model.CardIssuance;
 import io.github.gnobroga.mscards.repository.CardRepository;
 import io.github.gnobroga.mscards.repository.ClientCardRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class CardIssuanceSubscriber {
 
     private final ObjectMapper objectMapper;
@@ -41,8 +43,8 @@ public class CardIssuanceSubscriber {
                 .limit(cardIssuance.getApprovedLimit())
                 .build();
             clientCardRepository.save(clientCard);
-       } catch (JsonProcessingException error) {
-            error.printStackTrace();
+       } catch (Exception error) {
+            log.error("Erro ao receber solicitação de emissão de cartão: {}", error.getMessage());
        }
     }
 }

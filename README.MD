@@ -7,3 +7,6 @@
 - Eureka Server 
 - Spring Cloud
 - Keycloak
+- Docker
+- Actuator
+- JPA

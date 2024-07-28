@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -61,7 +62,7 @@ public class CardEvaluatorService {
                     var factor = age.divide(BigDecimal.valueOf(10));
                     var approvedLimit = factor.multiply(basicLimit);
                     return new CardEvaluatorResponseDTO(card.getId(), card.getName(), card.getFlagCard(), approvedLimit);
-                }).toList();
+                }).collect(Collectors.toList());
         } catch (FeignClientException e) {
           final var status = e.status();
           if (Objects.equals(HttpStatus.NOT_FOUND.value(), status)) {

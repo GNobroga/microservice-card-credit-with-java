@@ -1,0 +1,18 @@
+version: "3"
+
+networks:
+  ms:
+    name: microservices
+    external: true
+
+services:
+
+  mseureka:
+    build:
+      context: ./
+    container_name: mseureka
+    restart: always 
+    ports:  
+      - '8761:8761'
+    networks:
+      - ms

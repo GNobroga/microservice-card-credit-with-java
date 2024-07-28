@@ -1,0 +1,18 @@
+version: "3"
+
+networks:
+  ms:
+    name: microservices
+    external: true
+
+services:
+
+  msgateway:
+    build:
+      context: ./
+    container_name: msgateway
+    restart: always 
+    ports: 
+      - 8080:8080
+    networks:
+      - ms

@@ -48,13 +48,15 @@ public class PopulateDatabaseService {
     }
 
     private FlagCard randomFlagCard() {
+        final var random = new Random();
         final var flagCards = FlagCard.values();
-        final var sortedNumber = new Random().nextInt(flagCards.length);
+        final var sortedNumber = random.nextInt(flagCards.length);
         return flagCards[sortedNumber];
     }
 
     private BigDecimal randomBigDecimal() {
-        final var sortedNumber = 1 + new Random().nextLong(10000L);
+        final var random = new Random();
+        final var sortedNumber = Math.min(random.nextLong() % 10000, 0);
         return new BigDecimal(sortedNumber);
     }
 
