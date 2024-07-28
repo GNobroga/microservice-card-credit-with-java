@@ -69,7 +69,9 @@ public class CardEvaluatorService {
                 throw new ClientNotFoundException();
             }
             throw new NoComunicationMicroserviceException(e.getMessage(), status);
-        } 
+        } catch (Exception e) {
+            throw new NoComunicationMicroserviceException(e.getMessage(), 500);
+        }
     }
 
     public ClientSituationResponseDTO getClientSituation(final String document) {

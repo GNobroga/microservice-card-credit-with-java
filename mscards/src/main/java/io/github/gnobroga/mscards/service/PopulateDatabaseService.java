@@ -56,7 +56,7 @@ public class PopulateDatabaseService {
 
     private BigDecimal randomBigDecimal() {
         final var random = new Random();
-        final var sortedNumber = Math.min(random.nextLong() % 10000, 0);
+        final var sortedNumber = Math.abs(random.nextLong() % 10000);
         return new BigDecimal(sortedNumber);
     }
 

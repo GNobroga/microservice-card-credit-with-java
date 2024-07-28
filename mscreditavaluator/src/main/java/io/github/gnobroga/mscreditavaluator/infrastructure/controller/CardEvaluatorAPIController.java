@@ -62,6 +62,8 @@ public class CardEvaluatorAPIController {
             return ResponseEntity.status(HttpStatus.valueOf(e.getStatus())).build();
         } catch (ClientNotFoundException e) {
             return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
         }
     }
 }
